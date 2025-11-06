@@ -165,14 +165,111 @@ else:
     print("Access denied.")#if no---this prints
 #NOTE:-----only 1 IF and 1 ELSE can be given all other condtions to be checked with elif statements only
 
-#---EXAMPLE@:#
+#---EXAMPLE2:#
 response=input("Wanna have some food?(Y/N)")
-if response=="Y" or response=="y":
+if response=="Y" or response=="y":#we can give either Y or y
     print("Have some.")
-elif response=="N" or response=="n":
+elif response=="N" or response=="n":#we can either can N or n
     print("Have a nice day")
-else:
+else: # for cases other than Y,y,N,n
     print("wrong")
+
+#---EXAMPLE3:#
+for_sale=True
+if for_sale: #ALREADY ASSIGNEND FOR SALE TO BE TRUE....
+    #other way of--- if for_sale==True:
+    print("Item for sale:")
+else:
+    print("Item not for sale")
+
+
+
+
+
+
+
+#~~~~~~~~~~~~PROJECT:PYTHON CALCULATOR~~~~~~~~~#
+operator_type=input("Print the operator type:")
+n1=float(input("Enter n1:"))
+n2=float(input("Enter n2:"))
+
+if operator_type=="+":
+    print(f"Addition:{n1+n2}")
+elif operator_type=="-":
+    print(f"Subtraction:{n1-n2}")
+elif operator_type=="*":
+    print(f"Multiplication:{n1*n2}")
+elif operator_type=="/":
+    print(f"Division:{n1/n2}")
+else:
+    print("Basic calculator only so only limited to 4 basic arithmetic operations.")
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+
+
+
+
+
+
+#~~~~~~~~~~~~~~~~~PROJECT:WEIGHT CONVERSION~~~~~~~#
+conversion_unit=input("ENter the type of SI unit of value (kg/lb):")
+value=float(input("Enter the value:"))
+if conversion_unit=="kg" or conversion_unit=="KG":
+    kg_to_lb= value*2.204623
+    print(f"THe value in|kg:{round(value,3)}|lb:{round(kg_to_lb,3)}")
+elif conversion_unit=="lb" or conversion_unit=="LB":
+    lb_to_kg= value/2.204623
+    print(f"THe value in|lb:{round(value,3)}|kg:{round(lb_to_kg,3)}")
+else:
+    print("Not under the regulated weight conversion unit")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+
+
+
+
+
+
+
+
+#LOGICAL OPERATORS:used in conditional statements
+#             and---checks 2 or more conditions to proceed if True
+#             or---checks atleast one condiion to be True to proceed
+#             not---True if condtion is False,and vice versa
+
+temp=25#lets say
+if temp>0 and temp<=30:#Prints statement only if temp is greater than zero and less than 30 as well
+    print("The temperature is good.")
+elif temp<0 or temp>30:#prints statement either if the temperature is sub zero or more than 30
+    print("Extreme Temperature.")
+else:
+    pass#pass is used just for the sake of dummy 
+
+#use of not is more different 
+sunny=True
+if sunny:
+    print("Its sunny outside")
+else:
+    print("Its cloudy outside")
+
+cloudy=True
+if not cloudy:#input=true but output is false 
+    print("Its not cloudy")
+else:
+    print("Its cloudy")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
