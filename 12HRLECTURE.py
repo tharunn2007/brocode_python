@@ -93,6 +93,56 @@ print(rounded_Division1_gives)#~~~~~~~~~OUTPUT= 3.33
 
 #MATH AND MATH MODULE IN PYTHON AND HOW TO USE IT:
 #topics:arithmetic operators,math functions and few exercises
+plus=0
+plus= plus+1 
+#IS SAME AS:
+plus+=1
+#######SAME GOES FOR SUBTRACTION(-=),MULTIPLICATION(*=),DIVISION(/=),POWER(**=),REMINDER MODULUS(%=),
+
+#BUILT IN FUNCTIONS:
+
+#round()----rounds of the decimal places
+dsd=2.7185
+res=round(dsd,2)
+print(res)#----------OUTPUT: 2.7185~2.718~2.72(.5 is always substituted to 0)
+
+#abs()----modulus funtion in calculus
+wer=-9.234
+ewr=abs(wer)
+print(ewr)#--------OUTPUT: 9.234
+
+#power()-------just same as a**x  but written as pow(a,x)
+resu=pow(2,4)
+print(resu)#--------OUTPUT: 16
+
+#max()-------maximum value between given value
+#min()------minimum value between given value
+qw=2
+we=3
+er=4
+print(max(qw,we,er),min(qw,we,er))#------OUTPUT:4 2 
+
+#USING MATH MODULE~~~
+#use import math
+import math
+print(math.pi)#-----OUTPUT:prints pi value 3.1415....15 digits
+print(math.e)#------OUTPUT:prints e value 2.718....15 digits
+cv=3
+sqres=math.sqrt(cv)#--------give any value inside bracket
+print(sqres)#--------OUTPUT:1.732....15 digits
+resut=math.ceil() # gives the appoximation as 9.1---10 LEAST INTEGER FUNCTION
+resut=math.floor()#gives the approximation as 9.8---9 GREATEST INTEGER FUNCTION
+
+
+#~~~~~CIRCUMFERENCE and AREA CALCULCULATION~~~~~#
+import math
+radius=float(input("Enter radius"))
+circumference=2*math.pi*radius
+print(f"The circumference of the circle is {circumference}")
+
+
+
+
 
 
 
