@@ -138,10 +138,41 @@ resut=math.floor()#gives the approximation as 9.8---9 GREATEST INTEGER FUNCTION
 import math
 radius=float(input("Enter radius"))
 circumference=2*math.pi*radius
-print(f"The circumference of the circle is {circumference}")
+print(f"The circumference of the circle is {round(circumference,2)} units")
+area=math.pi*pow(radius,2)
+print(f"THe area of the circle is {round(area,2)} units.sq")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 
 
+
+
+
+
+#if statement---does some code only IF some condition is True
+#else statement----it does the code if the it didnt satisfy the the True if
+#elif---(else if)---prints for any intermediate condition to be checked other than if
+
+#---EXAMPLE1:#
+age=int(input("ENter your age:"))
+if age>= 18:#----Checks if input is 18 and above or not
+    print("Valid.You can sign up.")#if yes----this prints
+elif age<0:
+    print("AGe less than 0 is not possible.")#If user is made mistake to give negative age :P
+elif age>100:
+    print("Too old to sign up")
+else:
+    print("Access denied.")#if no---this prints
+#NOTE:-----only 1 IF and 1 ELSE can be given all other condtions to be checked with elif statements only
+
+#---EXAMPLE@:#
+response=input("Wanna have some food?(Y/N)")
+if response=="Y" or response=="y":
+    print("Have some.")
+elif response=="N" or response=="n":
+    print("Have a nice day")
+else:
+    print("wrong")
 
 
 
