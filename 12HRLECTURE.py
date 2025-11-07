@@ -293,13 +293,66 @@ print(max_num,min_num)#~~~~~~~~OUTPUT:7 6
 
 
 #BUILT IN STRING FUNCTIONS AND METHODS:
-name=input("Enter you full name:") #Lets say its "Bro Code"
+name= "Bro Code"
+
 #        string length---len()
 str_len=len(name)
-print(str_len)#~~OUTPUT:----8    (The blankspace is also considered as a charecter)
+print(str_len)#~~OUTPUT:8    (The blankspace is also considered as a charecter)
 
-#       name.find()---gives the first occurance of a given charecter
+#       name.find()---gives the first occurance INDEX VALUE of a given charecter
 found=name.find("o")
+print(found)#~~OUTPUT:2  the second index value 0,1,2 
+                                            #   B,r,o
+found2=name.find("z")
+print(found2)   #OUTPUT:-1   if it didnt recognise the charecter in the given string it PRINTS -1 and NOT AN ERROR 
+
+#      name.rfind()---gives the last occurance INDEX VALUE of given charecter
+found3=name.rfind("o")
+print(found3)  #OUTPUT: 5 [B,r,o, ,C,o=5,d,e]
+#again returns -1 if the charecter not found
+
+#      name.capitalize()---captitalize the first charecte in a string
+name2="bro code"
+capitaliz=name2.capitalize()
+print(capitaliz)#---- OUTPUT:Bro code
+
+#     name.upper()---upper case transformed for every charecter
+uppered=name.upper()
+print(uppered)#   OUTPUT: BRO CODE    (even if the name was BrO cOdE---changes to BRO CODE)
+
+#     name.lower()---everything is lower
+lowered=uppered.lower() #uppered=BRO CODE
+print(lowered)#   OUTPUT:bro code
+
+#     name.isdigit()---True if the string ONLY contains integer else False
+#True for INTEGERES ONLY...False for FLOAT as float contains a decimal point
+#   Bro Code--False,Bro123--False,123--True,123.92--False
+
+
+#     name.isalpha()---True if string ONLY contains alphabetical charecters..else false
+# Bro Code---False(cointains blankspace),Bro123--False(numbers),BroCOde--True
+
+#     count()----Counts the reoccuring of the specific charecters in a string
+#Example:
+ph_no="1-234-453-21-324-1242"
+result2=ph_no.count("-")
+print(result2) #~~~OUTPUT: 5
+
+#     replace()---Replaces one type of string to another type
+result3=ph_no.replace("-"," ")
+print(result3)#~~~OUTPUT: 1 234 453 21 324 1242
+
+result4=ph_no.replace("-","")
+print(result4)#~~~OUTPUT: 1234453213241242
+
+#FOR NEED OF ANY HELP:
+# for list of comprehensive string methods that you can use we can use help()
+
+
+
+
+
+
 
 
 
