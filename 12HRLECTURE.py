@@ -267,6 +267,46 @@ else:
 
 
 
+#Condtional expression= A oneline shortut for the if-else statement(ternary operator)
+#                    print/assign one of the two values based on a condition
+#                    X if <condition> else Y
+number=5
+print("Positive" if number>0 else "Negative")
+resultt="Even" if number%2==0 else "Odd"
+print("Resultt")#~~~~~~~OUTPUT:Odd
+
+number2=6
+number3=7
+max_num= number2 if number2>number3 else number3
+min_num=number2 if number2<number3 else number3
+print(max_num,min_num)#~~~~~~~~OUTPUT:7 6
+
+
+
+
+
+
+
+
+
+
+
+
+#BUILT IN STRING FUNCTIONS AND METHODS:
+name=input("Enter you full name:") #Lets say its "Bro Code"
+#        string length---len()
+str_len=len(name)
+print(str_len)#~~OUTPUT:----8    (The blankspace is also considered as a charecter)
+
+#       name.find()---gives the first occurance of a given charecter
+found=name.find("o")
+
+
+
+
+
+
+
 
 
 
