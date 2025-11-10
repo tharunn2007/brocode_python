@@ -104,7 +104,7 @@ plus+=1
 #round()----rounds of the decimal places
 dsd=2.7185
 res=round(dsd,2)
-print(res)#----------OUTPUT: 2.7185~2.718~2.72(.5 is always substituted to 0)
+print(res)#----------OUTPUT: 2.7185 ~ 2.718 ~ 2.72(.5 is always substituted to 0)
 
 #abs()----modulus funtion in calculus
 wer=-9.234
@@ -154,7 +154,7 @@ print(f"THe area of the circle is {round(area,2)} units.sq")
 #elif---(else if)---prints for any intermediate condition to be checked other than if
 
 #---EXAMPLE1:#
-age=int(input("ENter your age:"))
+age=int(input("Enter your age:"))
 if age>= 18:#----Checks if input is 18 and above or not
     print("Valid.You can sign up.")#if yes----this prints
 elif age<0:
@@ -345,8 +345,271 @@ print(result3)#~~~OUTPUT: 1 234 453 21 324 1242
 result4=ph_no.replace("-","")
 print(result4)#~~~OUTPUT: 1234453213241242
 
-#FOR NEED OF ANY HELP:
+#FOR NEED OF ANY HELP: help()
 # for list of comprehensive string methods that you can use we can use help()
+print(help(str))
+#OUTPUT:.....dont get scared...
+"""
+Help on class str in module builtins:
+
+class str(object)
+ |  str(object='') -> str
+ |  str(bytes_or_buffer[, encoding[, errors]]) -> str
+ |  
+ |  Create a new string object from the given object. If encoding or
+ |  errors is specified, then the object must expose a data buffer
+ |  that will be decoded using the given encoding and error handler.
+ |  Otherwise, returns the result of object.__str__() (if defined)
+ |  or repr(object).
+ |  encoding defaults to sys.getdefaultencoding().
+ |  errors defaults to 'strict'.
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, value, /)
+ |      Return self+value.
+ |  
+ |  __contains__(self, key, /)
+ |      Return key in self.
+ |  
+ |  __eq__(self, value, /)
+ |      Return self==value.
+ |  
+ |  __format__(self, format_spec, /)
+ |      Return a formatted version of the string as described by format_spec.
+ |  
+ |  __ge__(self, value, /)
+ |      Return self>=value.
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __getitem__(self, key, /)
+ |      Return self[key].
+ |  
+ |  __getnewargs__(self, /)
+ |  
+ |  __gt__(self, value, /)
+ |      Return self>value.
+ |  
+ |  __hash__(self, /)
+ |      Return hash(self).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __le__(self, value, /)
+ |      Return self<=value.
+ |  
+ |  __len__(self, /)
+ |      Return len(self).
+ |  
+ |  __lt__(self, value, /)
+ |      Return self<value.
+ |  
+ |  __mod__(self, value, /)
+ |      Return self%value.
+ |  
+ |  __mul__(self, value, /)
+ |      Return self*value.
+ |  
+ |  __ne__(self, value, /)
+ |      Return self!=value.
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |  
+ |  __rmod__(self, value, /)
+ |      Return value%self.
+ |  
+ |  __rmul__(self, value, /)
+ |      Return value*self.
+ |  
+ |  __sizeof__(self, /)
+ |      Return the size of the string in memory, in bytes.
+ |  
+ |  __str__(self, /)
+ |      Return str(self).
+ |  
+ |  capitalize(self, /)
+ |      Return a capitalized version of the string.
+ |      
+ |      More specifically, make the first character have upper case and the rest lower
+ |      case.
+ |  
+ |  casefold(self, /)
+ |      Return a version of the string suitable for caseless comparisons.
+ |  
+ |  center(self, width, fillchar=' ', /)
+ |      Return a centered string of length width.
+ |  
+ |  count(self, sub, start=0, end=9223372036854775807, /)
+ |      Return the number of non-overlapping occurrences of substring sub in string
+ |      s[start:end].
+ |  
+ |  encode(self, /, encoding='utf-8', errors='strict')
+ |      Encode the string using the codec registered for encoding.
+ |  
+ |  endswith(self, suffix, start=0, end=9223372036854775807, /)
+ |      Return True if the string ends with the specified suffix, False otherwise.
+ |  
+ |  expandtabs(self, /, tabsize=8)
+ |      Return a copy where all tab characters are expanded using spaces.
+ |  
+ |  find(self, sub, start=0, end=9223372036854775807, /)
+ |      Return the lowest index in the string where substring sub is found.
+ |  
+ |  format(self, /, *args, **kwargs)
+ |      Return a formatted version of the string using format() style.
+ |  
+ |  format_map(self, mapping, /)
+ |      Return a formatted version of the string using a mapping dictionary.
+ |  
+ |  index(self, sub, start=0, end=9223372036854775807, /)
+ |      Like find(), but raise ValueError when the substring is not found.
+ |  
+ |  isalnum(self, /)
+ |      Return True if the string is an alpha-numeric string, False otherwise.
+ |  
+ |  isalpha(self, /)
+ |      Return True if the string is an alphabetic string, False otherwise.
+ |  
+ |  isascii(self, /)
+ |      Return True if all characters in the string are ASCII, False otherwise.
+ |  
+ |  isdecimal(self, /)
+ |      Return True if the string is a decimal string, False otherwise.
+ |  
+ |  isdigit(self, /)
+ |      Return True if the string is a digit string, False otherwise.
+ |  
+ |  isidentifier(self, /)
+ |      Return True if the string is a valid Python identifier, False otherwise.
+ |  
+ |  islower(self, /)
+ |      Return True if all cased characters in the string are lowercase and there is
+ |      at least one cased character, False otherwise.
+ |  
+ |  isnumeric(self, /)
+ |      Return True if the string is a numeric string, False otherwise.
+ |  
+ |  isprintable(self, /)
+ |      Return True if all characters in the string are printable, False otherwise.
+ |  
+ |  isspace(self, /)
+ |      Return True if the string is a whitespace string, False otherwise.
+ |  
+ |  istitle(self, /)
+ |      Return True if the string is a title-cased string, False otherwise.
+ |  
+ |  isupper(self, /)
+ |      Return True if all cased characters in the string are uppercase and there is
+ |      at least one cased character, False otherwise.
+ |  
+ |  join(self, iterable, /)
+ |      Concatenate any number of strings.
+ |  
+ |  ljust(self, width, fillchar=' ', /)
+ |      Return a left-justified string of length width.
+ |  
+ |  lower(self, /)
+ |      Return a copy of the string converted to lowercase.
+ |  
+ |  lstrip(self, chars=None, /)
+ |      Return a copy of the string with leading whitespace removed.
+ |  
+ |  partition(self, sep, /)
+ |      Partition the string into three parts using the given separator.
+ |  
+ |  removeprefix(self, prefix, /)
+ |      Return a string with the given prefix string removed if present.
+ |  
+ |  removesuffix(self, suffix, /)
+ |      Return a string with the given suffix string removed if present.
+ |  
+ |  replace(self, old, new, count=-1, /)
+ |      Return a copy with all occurrences of substring old replaced by new.
+ |  
+ |  rfind(self, sub, start=0, end=9223372036854775807, /)
+ |      Return the highest index in the string where substring sub is found.
+ |  
+ |  rindex(self, sub, start=0, end=9223372036854775807, /)
+ |      Like rfind() but raise ValueError when the substring is not found.
+ |  
+ |  rjust(self, width, fillchar=' ', /)
+ |      Return a right-justified string of length width.
+ |  
+ |  rpartition(self, sep, /)
+ |      Partition the string into three parts using the given separator, starting from
+ |      the right.
+ |  
+ |  rsplit(self, /, sep=None, maxsplit=-1)
+ |      Return a list of the words in the string, using sep as the delimiter string.
+ |  
+ |  rstrip(self, chars=None, /)
+ |      Return a copy of the string with trailing whitespace removed.
+ |  
+ |  split(self, /, sep=None, maxsplit=-1)
+ |      Return a list of the words in the string, using sep as the delimiter string.
+ |  
+ |  splitlines(self, /, keepends=False)
+ |      Return a list of the lines in the string, breaking at line boundaries.
+ |  
+ |  startswith(self, prefix, start=0, end=9223372036854775807, /)
+ |      Return True if the string starts with the specified prefix, False otherwise.
+ |  
+ |  strip(self, chars=None, /)
+ |      Return a copy of the string with leading and trailing whitespace removed.
+ |  
+ |  swapcase(self, /)
+ |      Convert uppercase characters to lowercase and lowercase characters to uppercase.
+ |  
+ |  title(self, /)
+ |      Return a titlecased version of the string.
+ |  
+ |  translate(self, table, /)
+ |      Return a copy of the string in which each character has been mapped through the
+ |      given translation table.
+ |  
+ |  upper(self, /)
+ |      Return a copy of the string converted to uppercase.
+ |  
+ |  zfill(self, width, /)
+ |      Pad a numeric string with zeros on the left, to fill a field of the given width.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  maketrans(x, y=None, z=None, /)
+ |      Return a translation table usable for str.translate().
+None
+"""
+
+
+#~~~~~~~~~~~~~~~PROJECT:USER NAME VALIDATION~~~~~~~~~~~~~~#
+#username nor more than 12 charecters
+#username must not contain spaces
+#username must not contain digits
+
+username=input("Enter your name:")
+
+if len(username)>12:
+    print("Too long!")
+elif not username.find(" ")==-1:
+    print("Not spaces in name")
+elif username.isdigit()==True:
+    print("No digit in name.")
+else:
+    print("Name verified!")
+
+
+
+
+
+
+
+
+
 
 
 
