@@ -595,14 +595,58 @@ username=input("Enter your name:")
 
 if len(username)>12:
     print("Too long!")
-elif not username.find(" ")==-1:
+elif not username.find(" ")==-1:#if it didnt find anythin it prints -1 BUT we added with a not statment therefore it the given condition comes out opposite then it prints the statement
     print("Not spaces in name")
-elif username.isdigit()==True:
-    print("No digit in name.")
+elif username.isdigit()==False:
+    print("No digit allowed in name.")
 else:
     print("Name verified!")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 
+
+
+
+
+
+
+
+
+#indexing = accessing INDIVIDUAL elements using the sequence using [](aka. indexing operator)
+# indexing operator-----[start:end:step]   ###(IMPORTANT PART)
+cred_no="123-41-1221-12451"
+#~~~~~~~~0---------------17   in forward it starts from zero
+#~~~~~~~-18-------------(-1)  in reverse it starts from -1
+print(cred_no[3])#OUTPUT: -
+print(cred_no[-3])#OUTPUT: 4
+print(cred_no[0:5])#prints from index zero-TO index 4 EVERYTHING UNDER 5 ##OUTPUT: 123-4
+print(cred_no[0:8:2])#print and skips with 2 value in step ##OUTPUT: 134-   doesnt go to 8
+print(cred_no[8:0:-2])#- step gives reverse counting---OUTPUT:2-43
+#NOTE:
+cred_no[0:7]==cred_no[:7] # not neccessary to give number if we indexing is starting at the beginning
+cred_no[6:] # starts with 6 and prints till the end of the string ## OUTPUT:1-1221-12451
+print(cred_no[::-1]) #START TO END but in reversed complete ##OUTPUT: 15421-1221-14-321
+
+#Hope you could make more ways of indexing with these sample....
+
+
+
+
+
+
+
+
+
+
+#~~~~~~~~~~~PROJECT:EMAIL SLICER~~~~~~~~~~~~~~~~~~~~#
+email=input("You email:") #my email be learnpython@gmail.com
+index=email.split("@")
+username=email[:index]
+domain=email[index:]
+print(f"split:{index}|name:{username}|domain:{domain}")
+"""
+OUTPUT:
+"""
 
 
 
