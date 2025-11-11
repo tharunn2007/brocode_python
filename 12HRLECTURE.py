@@ -640,13 +640,80 @@ print(cred_no[::-1]) #START TO END but in reversed complete ##OUTPUT: 15421-1221
 
 #~~~~~~~~~~~PROJECT:EMAIL SLICER~~~~~~~~~~~~~~~~~~~~#
 email=input("You email:") #my email be learnpython@gmail.com
-index=email.split("@")
-username=email[:index]
-domain=email[index:]
-print(f"split:{index}|name:{username}|domain:{domain}")
-"""
-OUTPUT:
-"""
+index_=email.index("@")
+username=email[:index_]
+domain=email[index_:]
+print(f"name:{username}|domain:{domain}")
+# OUTPUT: name:learnpython|domain:gmail.com
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+
+
+
+
+
+
+
+
+#formatted specifiers = {:<flags>} format a value based on what flags are inserted
+#USED IN THE CONTACT OF "f" string (just like the formatted strings that we see in print())
+#NOTE:The format specifiers SHOULD be included in the place holders of f string ONLY.
+price1=3.14159
+price2=-978.65
+price3=12.34
+
+# .(number)f  = round of the the given "number" decimal places
+print(f"The prices are {price1:.3f},{price2:.3f}")
+###OUTPUT: The prices are 3.142,-978.650
+
+# :(number)   = allocate that many spaces( EXPLANATION:If we give the number,the given output of the data would have been filled with that many spces so its length is the number we have given)
+print(f"The prices with spaces are ({price1:10}),({price2:20})")
+###OUTPUT: The prices with spaces are (   3.14159),(             -978.65)   #hope u get it
+                                       # 10 length   #20 length
+
+# :0(number)        = allocate and zero pad that many spaces (same as previous but adds zero instead of spaces)
+print(f"The prices with zeropads are ({price1:010}),({price2:020})")
+###OUTPUT: The prices with zeropads are (0003.14159),(-0000000000000978.65)~~Negative sign goes out
+
+# :<(number)        = left justify (does the same as :(number) but all the spaces added in after our given charecters)
+print(f"The prices with left justify are ({price1:<10}),({price2:<20})")
+###OUTPUT: The prices with left justify are (3.14159   ),(-978.65             )
+
+# :>(number)        = right justify 
+#NOTE: right justify is same as .(number)f 
+
+
+# :^(number)        = center align(numbers are centered in spaces)
+print(f"The prices with left justify are ({price1:^10}),({price2:^20})")
+###OUTPUT: The prices with left justify are ( 3.14159  ),(      -978.65       )
+
+# :+          = use a plus sign to indicate postive value else leaves it
+print(f"The prices with left justify are ({price1:+10}),({price2:+20})")
+###OUTPUT: The prices with left justify are (  +3.14159),(             -978.65)
+
+# :=          = place the sign to left most position
+
+# :(space)    = insert a space before positive numbers
+# :,          = comma seperator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

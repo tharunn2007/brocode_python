@@ -1,5 +1,3 @@
-email=input("You email:") #my email be learnpython@gmail.com
-index_=email.index("@")
-username=email[:index_]
-domain=email[index_:]
-print(f"name:{username}|domain:{domain}")
+price1=3.14159
+price2=-978.65
+print(f"The prices with left justify are ({price1:+10}),({price2:+20})")
