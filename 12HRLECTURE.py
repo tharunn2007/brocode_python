@@ -731,7 +731,7 @@ print(f"The price4 with using mixed format specifiers are({price4:+,.2f,^20})")#
 #while loop statements
 #  while loop= execute some code WHILE some condition is True
 
-#one of the thing is to repeat the code again until its true
+#one of the thing is to repeat the code again until its true 
 import math
 while True:
     just_something= int(input("ENter a number"))
@@ -739,14 +739,15 @@ while True:
         print(f"The number is even and its root is:{math.sqrt(just_something):.3f}")
     else:
         print(f"The number is odd and its cube is:{math.pow(just_something,3):^20}")
-"""
-OUTPUT:
-"ENter a number2
-The number is even and its root is:1.414
-ENter a number3
-The number is odd and its cube is:        27.0        
-ENter a number 
-"""
+    break
+
+###OUTPUT:
+#   ENter a number2
+#   The number is even and its root is:1.414
+#   ENter a number3
+#   The number is odd and its cube is:        27.0        
+#   ENter a number 
+
 #It asks the enter the number for every single time...
 
 
@@ -755,10 +756,121 @@ ENter a number
 #for loop iterate over a sewquence but while loop is printing when the condtions is true and stops when it becomes false
 
 ntimes=input("NUmber of times you want to print the greeting..:")
-i=0
-while i<n:
-    print(f"Hello there {i}")
+i=0 #unlike for loop we gotta define the variables
+while i<ntimes:
+    print(f"Hello there {i+1}")
     i+=1
+###OUTPUT:
+#  NUmber of times you want to print the greeting..:5
+#  Hello there 1
+#  Hello there 2
+#  Hello there 3
+#  Hello there 4
+#  Hello there 5
+
+#the code ends before the i reach 5 and the loop ends in while
+
+#example:
+name323=input("Enter:")
+while name=="":
+    print("Disnt enter the name")
+    name323=input("ENter name:")#if we dont give this staement then this creats an infinite loop and that is not good
+print(F"hello {name323}") #asks the name repeatedly until something is written in the input
+
+#NOTE: it is ALWAYS IMPORTANT TO WRITE AN EXIT STATEMENT so not to cause an infinite recurring loop
+
+
+food=input("Wanna eat something? (y/n)")
+while not food == "n":
+    print("So what is your faourite and")
+    food=input("Enter the food name you like or even then if you wanna quit:(y/n)")
+print("Bye")
+###OUTPUT:
+#   Wanna eat something? (y/n)y
+#   So what is your faourite and
+#   Enter the food name you like or even then if you wanna quit:(y/n)n
+#   Bye
+
+
+
+
+
+
+
+
+
+
+
+#NOTE: You gotta do ALL projects by yourself without the tutorial!!
+
+
+
+
+
+
+
+
+
+#~~~~~~~~~~~~~~~~~PROJECT:COMPOUND INTEREST CALCULATOR~~~~~~~~~~#
+n_people=int(input("Enter for the number of the people to calculate:"))
+i=0
+
+while i<n_people:
+    principle_investment=float(input("Enter the investment of yours:"))
+
+    rate_frequency=input("Enter the rate calculated(monthly/yearly):")
+    if rate_frequency=="yearly":
+        n_times=1
+    elif rate_frequency=="monthly":
+        n_times=int(input("Enter the number of times rate calculated in a year:"))
+    else:
+        print("Invalid.Please try again!")
+        rate_frequency=input("Enter the rate calculated(monthly/yearly):")
+
+    rate=float(input("ENter the rate of interest:"))
+
+    time_yearly=int(input("ENter the number of years you gonna be payin the ecompund interest for in years:"))
+
+    compund_amount=principle_investment*((1+((rate/100)/n_times))**(time_yearly*n_times))
+    compound_interest=compund_amount-principle_investment
+
+    print(f"User name: {i+1}|Compound amount accumulated:{compund_amount:,.3f}|Compound interest:{compound_interest:,.3f}")
+
+    i+=1
+    #you can actually do a lot better code with this
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+
+
+
+
+
+
+
+
+
+
+#for loops:execute a code of block for fixed number of times we can use range,len,sequence,etc.
+
+#for loops are better at executing than while loops when WE KNOW to iterate FIXED number of times
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
