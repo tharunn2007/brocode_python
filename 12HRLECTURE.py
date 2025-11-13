@@ -684,17 +684,83 @@ print(f"The prices with left justify are ({price1:<10}),({price2:<20})")
 
 
 # :^(number)        = center align(numbers are centered in spaces)
-print(f"The prices with left justify are ({price1:^10}),({price2:^20})")
+print(f"The prices with center aligned spaces are ({price1:^10}),({price2:^20})")
 ###OUTPUT: The prices with left justify are ( 3.14159  ),(      -978.65       )
 
 # :+          = use a plus sign to indicate postive value else leaves it
-print(f"The prices with left justify are ({price1:+10}),({price2:+20})")
-###OUTPUT: The prices with left justify are (  +3.14159),(             -978.65)
+print(f"The prices with positive value indication are ({price1:+10}),({price2:+20})")
+###OUTPUT: The prices with sign indication are (  +3.14159),(             -978.65)
 
 # :=          = place the sign to left most position
+print(f"The prices with left sign justify are ({price1:=10}),({price2:=20})")
+###OUTPUT: The prices with left justify of signs are (   3.14159),(-             978.65)
 
 # :(space)    = insert a space before positive numbers
-# :,          = comma seperator
+print(f"The prices with spaces are ({price1: 10}),({price2: 20})")
+###OUTPUT: SAME AS :(number)
+
+# :,          = comma seperator that makes the numbers like 100044 as 100,044
+price4=23412352.232
+price5=-25231345
+print(f"The prices with comma seperated are ({price4:,}),({price5:,})")
+###OUTPUT: The prices with comma seperated are (23,412,352.232),(-25,231,345)
+
+
+#MIXED FORMAT SPECIFIERS in python---uses multiple specifiers to use at a same time
+print(f"The price4 with using mixed format specifiers are({price4:+,.2f})")
+###OUTPUT: The price4 with using mixed format psecifiers are (+23,412,352.23)<------
+                                                                                  #|
+print(f"The price4 with using mixed format specifiers are({price4:+,.2f,^20})")#   |
+#ERROR!!! can do only maximum upto 3 format specifiers in the above given problem -|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#while loop statements
+#  while loop= execute some code WHILE some condition is True
+
+#one of the thing is to repeat the code again until its true
+import math
+while True:
+    just_something= int(input("ENter a number"))
+    if just_something%2==0:
+        print(f"The number is even and its root is:{math.sqrt(just_something):.3f}")
+    else:
+        print(f"The number is odd and its cube is:{math.pow(just_something,3):^20}")
+"""
+OUTPUT:
+"ENter a number2
+The number is even and its root is:1.414
+ENter a number3
+The number is odd and its cube is:        27.0        
+ENter a number 
+"""
+#It asks the enter the number for every single time...
+
+
+#this is infinitely repeating unless we doesnt designate it to some other number of times to be repeated.
+#how exactly it is different from for loop?  
+#for loop iterate over a sewquence but while loop is printing when the condtions is true and stops when it becomes false
+
+ntimes=input("NUmber of times you want to print the greeting..:")
+i=0
+while i<n:
+    print(f"Hello there {i}")
+    i+=1
+
+
 
 
 

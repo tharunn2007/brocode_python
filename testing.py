@@ -1,3 +1,5 @@
-price1=3.14159
-price2=-978.65
-print(f"The prices with left justify are ({price1:+10}),({price2:+20})")
+ntimes=int(input("NUmber of times you want to print the greeting..:"))
+i=0
+while i<ntimes:
+    print(f"Hello there {i}")
+    i+=1
