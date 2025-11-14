@@ -854,7 +854,49 @@ while i<n_people:
 
 #for loops are better at executing than while loops when WE KNOW to iterate FIXED number of times
 
+#break statement----doesnt let the other statements to be executed once this statement ot be executed in a loop.
 
+#nested loop = loop within a loop
+#outter loop:
+#   inner loop:
+
+for x in range(1,10):
+    print(x,end="")#----end gives the loop execution pattern
+#OUTPUT~~~ 123456789
+    print(x,end=" ")
+#OUTPUT~~~ 1 2 3 4 5 6 7 8 9
+    print(x,end="\n")
+""" 
+OUTPUT:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+"""
+#NESTED LOOP:
+# in nested for loops the variable counters should not be the same 
+
+for i in range(3):
+    for j in range(1,6):
+        print(x,end="")
+#OUTPUT:123451234512345
+
+
+#Pattern based problems are very good to solve loops and nested loops
+#
+##
+###
+####
+#####
+####
+###
+##
+#    patterns like this and so on!!
 
 
 
