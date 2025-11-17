@@ -970,7 +970,45 @@ list_eg=["a","b","c","d"]
 #list and tuples also have indexing from 0 to n-1 is n is the number of elements
 #accessing out of the index range GIVES IndexError
 #TO CHECK WHAT KIND OF FUNCTIONS CAN LIST PERFORM::
+
 print(dir(list_eg))
+"""OUTPUT:
+delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']"""
+
+print(help(list_eg))
+#helps with the attibutes and elements we could work upon
+
+print(len(list_eg))#length of list
+
+print("e" in list)#boolean true or false  here its false
+  #normal access <list name>[]
+#NOTE: for NESTED LISTS accessing doen throuh list[i][j],ith element in main list and jth element in the sublist/tuple
+
+print(list_eg.append("e"))#appends list element to LAST INDEX PLACE
+
+
+list_eg.remove("b")#REMOVES b     PARAMETER REQUIREMENT IS MANDATORY else TypeError
+
+list_eg.insert(1,"b")  #inserts b into INDEX 1
+
+list_eg.sort()# SORTS either in ASCENDING alphabetical or number order
+#NOTE: for descending order its 
+list_eg.sort(revrese=True)
+
+
+#genreally reversing a  functions list in 180
+list_eg.reverse()  #---- Gives:  ["d","c","b","a"]
+
+#finding index of a functions
+print(list.index("a"))# prints 0
+#IF there is no index is given ValueError
+
+
+
+
+
+
+
 
 
 
