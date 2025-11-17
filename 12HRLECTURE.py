@@ -903,7 +903,74 @@ for i in range(3):
 
 
 
+#~~~~~~~~~~~~~~~~~~~~~~~~COUNTUDOWN TIMER PROGRAM~~~~~~~~~~~~~~#
+#USES AN INBUILT FUNCTION MODULE 
 
+
+import time
+variable_time=int(input("Enter how long IN SECONDS you want to sleep:"))
+for x in range(variable_time,0,-1):
+    print(x)
+    time.sleep(1)#program sleeps or doesnt show anything for a given amount of seconds...
+print("TIMES UP!")
+
+#GAVE 3
+"""OUTPUT:
+Enter how long IN SECONDS you watn to sleep:  
+3
+2
+1
+TIMES UP!
+"""
+
+#for showing like xx:yy:zz
+import time
+inp_time=int(input("enter the timer:"))
+for x in range(inp_time,0,-1):
+    seconds=x%60  #incase if the seconds left is 70 then it shows 70%60 which is 10
+    hours=x//3600 #counts the full hours
+    minutes=(x%3600)//60 #counts the minutes aside from full hours by giving the modulo
+    time.sleep(1)
+print("TIMES UP")#after the countdown over this line executes that is why it is outside
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#collections= single "variable" used to store multiple values
+# List= []----Ordered,mutable,duplicates OK
+# Set=  {}----unordered,immutable(add/remove OK),duplicates NO
+# Tuples= ()--Ordered,immutable,DUplicates OK. FASTER IN TERMS OF ELEMENT ACCESS due to immutability that doesnt cause complexitites
+
+
+#LISTS:
+list_eg=["a","b","c","d"]
+#list and tuples also have indexing from 0 to n-1 is n is the number of elements
+#accessing out of the index range GIVES IndexError
+#TO CHECK WHAT KIND OF FUNCTIONS CAN LIST PERFORM::
+print(dir(list_eg))
 
 
 
