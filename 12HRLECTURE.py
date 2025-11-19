@@ -965,7 +965,8 @@ print("TIMES UP")#after the countdown over this line executes that is why it is 
 # Tuples= ()--Ordered,immutable,DUplicates OK. FASTER IN TERMS OF ELEMENT ACCESS due to immutability that doesnt cause complexitites
 
 
-#LISTS:
+#_______________LISTS_____________#
+
 list_eg=["a","b","c","d"]
 #list and tuples also have indexing from 0 to n-1 is n is the number of elements
 #accessing out of the index range GIVES IndexError
@@ -1001,7 +1002,127 @@ list_eg.reverse()  #---- Gives:  ["d","c","b","a"]
 
 #finding index of a functions
 print(list.index("a"))# prints 0
-#IF there is no index is given ValueError
+#IF there is no index is given ERROR
+
+#if the value in the given list doesnt exist....THEN PRINTS ValueError
+
+
+#counting the recurrances of a element in a list 
+print(list_eg.count("a")) # returns 1   (since we have only 1 a in our list)
+
+
+print(list_eg.len())  #finds the length of the list
+
+#pop() removes the element at the specific index.IF no index value is given then it pops the LAST element AND PRINTS
+list_2=[1,2,3,4,5,6,7,"qwd"]
+popped=list_2.pop()
+print(popped) #OUTPUT-qwd
+print(list_2) #OUTPUT-[1,2,3,4,5,6,7]
+list_2.pop(4)
+print(list_2)#OUTPUT--[1,2,3,4,6,7]
+#VERY IMPORTANT
+
+list.clear()#CLEARS EVERY ELEMNTS leaving the list alone
+
+#____________SETS____________#
+#SET takes in ONLY UNIQUE ELEMENTS
+list_eg2=[1,2,3,45,56,1,3]
+exampleset=set(list_eg2)
+print(exampleset)#OUTPUT----{2,1,3,45,56}
+
+
+#FOR GETTING WHAT methods can be used
+print(dir(exampleset))
+print(help(exampleset))
+
+#We can check if there is an element in a set by <name> in exmpleset (just as for list) True/False boolean answer given
+
+#TYPE ERROR RISES IF WE ASK FOR INDEX
+print(exampleset[0])#OUTPUT---TypeError
+
+#add("your input"),remove("you input") can be Done
+ 
+exampleset.pop()#randomly removes any element rom the set
+
+exampleset.clear()#clears EVERY ELEMENT from the set and returns only empty set
+
+
+ 
+#_________TUPLES_____________#
+#Most functions used in lists can be usd but rather it cant duplicate 
+#CONCATENATION,MULTIPLICATION of tuples are VALID since we are not changing the original tuple but rather new tuple to be created
+#tuples are iteratable as well and FASTER compared to list
+
+
+#NOTE: How to add things into tuple??
+#make the tuple as a list as list(<tuple name>),and add into the list and again convert it back to tuple.
+#Same thing goes to sets as well but 
+#_______________________________#
+
+ 
+
+###PYTHON 2D COLLECTIONS based on the ested lists in a list
+#have a pattern of matrix
+matrix_list=[[1,2,3]
+             [4,5,6]
+             [7,8,9]]
+matrix_list[0][0]#output-1 
+
+for i in matrix_list:
+    for j in i:
+        print(j,end=" ")
+    print() #outside the loop to print newline for every in nested list is being edded one time
+
+
+
+
+
+asd=[],asw=()
+zip({asd},{asw}) #zip is an function that helps in  iterating mutiple variables at once
+
+
+
+#~~~~~~~~~~~~~~~~~~~QUIZ GAME~~~~~~~~~~~~~~~~~~#
+print("CONTAINS NEGATIVE MARKING")
+questions = ("How many elements are in the periodic table?: ",
+                       "Which animal lays the largest eggs?: ", "What is the most abundant gas in Earth's atmosphere?: ",
+                       "How many bones are in the human body?: ",
+                       "Which planet in the solar system is the hottest?: ")
+
+options = (("A. 116", "B. 117", "C. 118", "D. 119"),
+                   ("A. Whale", "B. Crocodile", "C. Elephant", "D. Ostrich"),
+                   ("A. Nitrogen", "B. Oxygen", "C. Carbon-Dioxide", "D. Hydrogen"),
+                   ("A. 206", "B. 207", "C. 208", "D. 209"),
+                   ("A. Mercury", "B. Venus", "C. Earth", "D. Mars"))
+
+
+
+answers = ["C", "D", "A", "A", "B"]
+Score = 0
+question_num = 0
+count_correct=0
+count_incorrect=0
+for q in questions:
+    print("______________________________")#as a part of partitioning the questions
+    print(q)
+for o in options:
+    print(o)
+
+guesses=input("Enter the options from question 1 to 5 to be entered as _,_,_,_,_:").upper().split(",")
+
+for i,j in zip(answers,guesses): 
+    if i==j:
+        Score+=1
+        count_correct+=1
+    else:
+        Score-=0.25
+        count_incorrect+=1
+
+    print(f"Answer: {i}, Guess: {j}")
+print(f"FINAL SCORE:{Score}")
+print(f"Correct:{count_correct}|Incorrect:{count_incorrect}")
+                
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 
 
@@ -1022,11 +1143,83 @@ print(list.index("a"))# prints 0
 
 
 
+#_________DICTIONARIES___________#
+# dictionary = a collection of {key:value} pairs
+# ordered and mutable.No duplicates (EVERY KEY MUST BE UNIQUE EVEN THOUGH VALUES CAN BE SAME)
+
+
+ascii_dict={"A":65,"B":66,"C":67,"D":68}
+
+print(dir(ascii_dict))#lists the attributes on the dictionary can be done
+print(help(ascii_dict))#explanation of the attributes
+
+#get()- used to get the value of the specific key 
+print(ascii_dict.get("A"))
+#IF THE KEY NOT PRESENT- returns None
+
+#update()- ADDS  key value pair to last (IF IT IS NEW KEY) ELSE(UPDATES EXISTING KEY)
+ascii_dict.update({"F":69})#adds F as 69th ascii
+ascii_dict.update({"A":61})#----updates ascii of A as 61 OBVIOUSLY NOT TRUE
+
+#pop()-  removes a key value pair
+ascii_dict.pop("A")
+
+#popitem()- removes the lates key value pair
+ascii_dict.popitem()  #removes F:69 which was the  latest entry
+
+#clear()  - cleears everything inside the dictionary
+
+
+#####CONFUSING PARTS#####
+
+#keys() 
+keys= ascii_dict.keys()
+print(keys)
+#OUTPUT~~~ dict_keys(['A', 'B', 'C', 'D'])   keys are considered as object and therefore is in list format...WILL BE LEARNT IN POOP
+#this can be used to iterate in a for loop
+for i in keys:
+    print(keys[0])
+    #OUTPUT: prints A
+
+#items()-returns the items in TUPLE format
+d = {'A': 'Python', 'B': 'Java', 'C': 'C++'}
+
+# using items() to get all key-value pairs
+items = d.items()
+
+print(items)
+#OUTPUT__ dict_items([('A', 'Python'), ('B', 'Java'), ('C', 'C++')])
+
+
+
+
+ #~~~~~~~~~~~~~~~~~~CONCESSION STAND~~~~~~~~~~~~~~~~~#
+menu = {"pizza": 3.00,  "nachos": 4.50,"popcorn": 6.00,"fries": 2.50,"chips": 1,"pretzel": 3.50,"soda": 3.00,"lemonade": 4.25}
+cart = {}
+total = 0.0
+
+print("_______MENU ITEMS AVAILABLE__________")
+for key,value in menu.items(): # (key,value) in items that is given
+    print(f"{key:.^10}:{value:.2f}/-")
+print("______________________________________")
+
+for foods in menu:
+    food_inp=input(f"Would you like to buy {foods}(y/n)").upper()
+    if food_inp=="Y":
+        quantity_inp=int(input(f"How many of {foods} you would like to buy:"))
+        cart.update({foods:quantity_inp})
+        total+=menu.get(foods)*quantity_inp
+    else:
+        pass #if we break then it wont iterate for the next food item
+    
+print("PURCHASE OVER!THANK YOU FOR PURCHASING AT IMAX!")
+print(f"YOUR PURCHASE BILL|Total Cost={total:.2f}/-")
 
 
 
 
 
+  
 
 
 
