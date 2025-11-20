@@ -1229,16 +1229,51 @@ print(f"YOUR PURCHASE BILL|Total Cost={total:.2f}/-")
 
 
 
+#RANDOM MODULES AND THEIR EXPLANTION
+
+import random
+print(help(random))
+
+#randint()---for defining  integers to be picked randomly
+rand_num=random.randint(1,6) #from a range 1,6 it picks ups a random number
+print(rand_num)#gives of different number within 1 to 6 
+#NOTE: randint() also have step function as (start,stop,step)
+
+#random()---when nothing is given in the brackets give a number of 15 floating point in between 0 and 1
+ranom_num=random.random()
+#OUTPUT: 0.124234124337865
+
+#choice()---makes a random choice of the element in a given 
+# Using with a list
+my_list = ['apple', 'banana', 'cherry']
+random_fruit = random.choice(my_list)
+print(f"Random fruit: {random_fruit}")
+
+# Using with a tuple
+my_tuple = (10, 20, 30, 40)
+random_number = random.choice(my_tuple)
+print(f"Random number from tuple: {random_number}")
+
+# Using with a string
+my_string = "Python"
+random_char = random.choice(my_string)
+print(f"Random character: {random_char}")
+
+# Using with a range
+random_from_range = random.choice(range(1, 10))
+print(f"Random number from range: {random_from_range}")
 
 
-
-  
-
-
-
-
-
-
+#shuffle()---shuffles the  elemetns in a collectios of data types like in lists,tuples.
+cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+choice_made=random.choice(cards) #that is the shuffled version of the cards list
+#NOTE:It does NOT return a new list  but rather makes the original LIST ITSELF AS A SHUFFLED ONE 
+choice_made=random.shuffle(cards) #that is the shuffled version of the cards list
+print(choice_made)
+print(cards)
+#NOTE:shuffle() CANT BE USED FOR SETS.returns type  error
+    # set can be converted to list and back into set
+#NOTE:For dictionaires, they are sets of UNORDERED key value pairs ad so we cant again shuffle again bu trather values and keys can be 
 
 
 
