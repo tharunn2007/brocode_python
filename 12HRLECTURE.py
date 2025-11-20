@@ -1212,8 +1212,21 @@ for foods in menu:
     else:
         pass #if we break then it wont iterate for the next food item
     
-print("PURCHASE OVER!THANK YOU FOR PURCHASING AT IMAX!")
+print("PURCHASE OVER!THANK YOU FOR PURCHASING AT IMAX!",end="\n")
 print(f"YOUR PURCHASE BILL|Total Cost={total:.2f}/-")
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+
+
+
+
+
+
+
+
+
+
 
 
 
