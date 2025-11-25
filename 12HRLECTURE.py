@@ -1273,7 +1273,40 @@ print(choice_made)
 print(cards)
 #NOTE:shuffle() CANT BE USED FOR SETS.returns type  error
     # set can be converted to list and back into set
-#NOTE:For dictionaires, they are sets of UNORDERED key value pairs ad so we cant again shuffle again bu trather values and keys can be 
+#NOTE:For dictionaires, they are sets of UNORDERED key value pairs ad so we cant again shuffle again bu trather values and keys can be shuffled in a list creation
+import random
+
+# A dictionary of cards and their values
+card_values = {'Ace': 1, 'King': 10, 'Queen': 10, 'Jack': 10, 'Ten': 10}
+
+# 1. Get the items as a list of tuples: [('Ace', 1), ('King', 10)...]
+items = list(card_values.items())
+
+# 2. Shuffle the list in-place
+random.shuffle(items)
+
+# 3. Convert back to a dictionary
+shuffled_dict = dict(items)
+
+print(shuffled_dict)
+# Output will be the same data, but the keys will be in a random order.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~NUMBER GUESSING GAME~~~~~~~~~~~~~~#
 
 
 
