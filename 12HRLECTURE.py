@@ -1305,8 +1305,122 @@ print(shuffled_dict)
 
 
 
+#~~~~~~~~~~~~~~~~~~~~~ROCK PAPER SCISSORS~~~~~~~~~~~~~~#
+#This is for infinite times...but it can be best of 5 or best of 10...but the higher difficulty can be done with race to 3 wins or 5 wins using points calcuator
+#I am making race to 3
+import random
+rps=("rock","paper","scissors")
+system_points=0
+user_points=0
 
-#~~~~~~~~~~~~~~~~~~~~~NUMBER GUESSING GAME~~~~~~~~~~~~~~#
+while True:
+    system_answer=random.choice(rps)
+    user_input=input(f"Give your input from {rps}:").lower()
+    if user_input in rps:
+        pass
+        if system_answer=="rock" and user_input=="paper":
+            print(f"system:{system_answer}")
+            print("user wins!")
+            user_points+=1
+
+        elif system_answer=="paper" and user_input=="rock":
+            print(f"system:{system_answer}")
+            print("system wins!")
+            system_points+=1
+
+        elif system_answer=="rock" and user_input=="scissors":
+            print(f"system:{system_answer}")
+            print("System wins!")
+            system_points+=1
+
+        elif system_answer=="scissors" and user_input=="rock":
+            print(f"system:{system_answer}")
+            print("User wins!")
+            user_points+=1
+
+        elif system_answer=="scissors" and user_input=="paper":
+            print(f"system:{system_answer}")
+            print("system wins!")
+            system_points+=1
+
+        elif system_answer=="paper" and user_input=="scissors":
+            print(f"system:{system_answer}")
+            print("user wins!")
+            user_points+=1
+        
+        else:
+            print("DRAW")
+        print(f"USER:{user_points}|SYSTEM:{system_points}")
+            
+        if user_points == 3:
+            print("\n!!! YOU WON THE MATCH !!!")
+            break 
+        elif system_points == 3:
+            print("\n!!! SYSTEM WON THE MATCH !!!")
+            break
+        
+    else:
+        print("Invalid!")
+# for best of 3 or n we just ask n input from user and whil i<n condtion is added
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
