@@ -837,7 +837,7 @@ while i<n_people:
     print(f"User name: {i+1}|Compound amount accumulated:{compund_amount:,.3f}|Compound interest:{compound_interest:,.3f}")
 
     i+=1
-    #you can actually do a lot better code with this
+    #you can actually do a lot better code with this with functions upcoming time
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 
@@ -1076,9 +1076,6 @@ for i in matrix_list:
 
 
 
-
-asd=[],asw=()
-zip({asd},{asw}) #zip is an function that helps in  iterating mutiple variables at once
 
 
 
@@ -1416,6 +1413,89 @@ dice_art = {
         "│  ●   ●  │",
         "└─────────┘")
 }
+dice=[]
+total=0
+dice_art_shown=[]
+dice_inp=input("Throw?:").lower()
+if dice_inp=="throw":
+    dice_num=int(input("Times to throw:"))
+    for dice_thrown in range(dice_num):
+        random_die=random.randint(1,6)
+        dice.append(random_die)
+    for i in dice:
+        total+=i
+    print(f"dice thrown:{dice}")
+    print(f"Total={total}")
+    for i in dice:
+        indivi_art=dice_art.get(i)
+        dice_art_shown.append(indivi_art)
+    for j in dice_art_shown:
+        for k in range(len(j)):#the j is THE TUPLE that contains EVERY ASCII art
+            print(j[k])
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#~~~~~~~~~~~~~~~~ENCRYPTION AND DECRYPTION~~~~~~~~~~~~~~~~~~~~~~~#
+#NOTE:I am skipping this
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+###
+##
+#
+#
+#YO THAT IS IT THE PART 1 THE VERY BASICS!!!
+
+
+
+
+#Other part part will be next be in topic wise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
