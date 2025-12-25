@@ -941,6 +941,15 @@ print("TIMES UP")#after the countdown over this line executes that is why it is 
 
 
 
+#
+#NOTE: Ones tens hundreds and throusands digit:
+#   ones    =   num%10          ones digit  =   nums%10
+#   tens    =   num%100         tens digit  =   (nums%100)//10
+#   hund   =   num%1000         hund digit  =   (nums%1000)//10
+#
+
+
+
 
 
 
